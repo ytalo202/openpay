@@ -75,11 +75,8 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
-        var openpayConfig = {
-            merchant_id: "mel8zy7mctoszlhuv9zv",
-            private_key: "sk_cf87aac9942441f3921c687a32f440b3",
-            public_key: "pk_22415ad1975e4ebe84c3b79158f953aa",
-        }
+        var openpayConfig = @json($openpayConfig);
+        console.log('openpayConfig', openpayConfig)
 
         OpenPay.setId(openpayConfig.merchant_id);
         OpenPay.setApiKey(openpayConfig.public_key);
